@@ -5,32 +5,20 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+fun main(){
+    Strings
+    val myStr = "Hello World"
+    var firstCharinStr = myStr[0]
+    var lastCharinStr = myStr [myStr.length - 1]
+    var myLength = myStr.length
+    print("First Character $firstCharinStr and the length of myStr is ${myStr.length}")
 
-        val btnIncrement = findViewById<Button>(R.id.mybutton)
-        val tvMyTextView = findViewById<TextView>(R.id.textView)
-        val btnReset = findViewById<Button>(R.id.mybutton2)
-        val btnDecrement = findViewById<Button>(R.id.mybutton3)
-        var timesClicked = 0
-        btnIncrement.setOnClickListener {
-            timesClicked ++
 
-            tvMyTextView.text = timesClicked.toString()
-        }
+    //print("Last Character" + lastCharInStr)
 
-        btnReset.setOnClickListener {
-            timesClicked = 0
-            tvMyTextView.text = timesClicked.toString()
-        }
-btnDecrement.setOnClickListener {
-    timesClicked --
+    // Arithmetic Operators ("+, -, * , /, %")
 
-    tvMyTextView.text = timesClicked.toString()
+    var result = 5+7
+    result %= 2
+    print(result)
 }
-        }
-
-    }
-
